@@ -38,7 +38,7 @@ function decodificar() {
 // FUNÇÃO PARA COPIAR O TEXTO CONVERTIDO
 function copy() {
     //navigator.clipboard.writeText(input2.value)
-    var conteudo = document.querySelector('#campo2').select();
+    document.querySelector('#campo2').select();
     document.execCommand('copy');
     alert('Copiado!');
 }
