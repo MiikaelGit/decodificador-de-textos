@@ -34,11 +34,15 @@ textarea {
 #campo2 {
     background-color: white;
     color: #0A3871;
-    font-size: 30px;
+    font-size: 32px;
+    color: #495057;
 }
 
 #campo2::placeholder {
     color: #0A3871;
+    font-size: 32px;
+    text-align: center;
+    color: #495057;
 }
 /*CAMPO DE TEXTO PARA A CODIFICAÇÃO*/
 .codificador {
