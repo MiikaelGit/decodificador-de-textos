@@ -26,14 +26,14 @@ function decodificar() {
     document.querySelector('img.icone').style.display = 'none';
     document.getElementById('campo').innerHTML = '';
 
-    var texto = input2.value
+    var texto = input.value
     var txt =  texto.replace(/enter/igm, 'e');
     var txt = txt.replace(/imes/igm, 'i');
     var txt = txt.replace(/ai/igm, 'a');
     var txt = txt.replace(/ober/igm, 'o');
     var txt = txt.replace(/ufat/igm, 'u');
  
-    document.getElementById('campo').innerHTML = `${txt}`;
+    document.getElementById('campo2').innerHTML = `${txt}`;
 }
 // FUNÇÃO PARA COPIAR O TEXTO CONVERTIDO
 function copy() {
