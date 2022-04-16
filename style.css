@@ -1,0 +1,215 @@
+body {
+    background-color: #F3F5FC;
+    display: flex;
+    height: 90vh;
+    width: 90vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*ALTERA AS PROPRIEDADES DA IMAGEM DA LOGOMARCA*/
+.logo {
+    margin: 20px 0 0 50px ;
+}
+/*ALTERA AS PROPRIEDADES DOS CAMPOS DE TEXTO*/
+#campo::placeholder {
+    color: #0A3871;
+}
+textarea {
+    color: #0A3871;
+    font-size: 32px;
+    font-weight: 100;
+    
+}
+
+textarea {
+    border: none;
+    background-color: #F3F5FC;
+    width: 100%;
+    height: 80%;
+    font-size: 32px;
+    color: #0A3871;
+    outline: none;
+    resize: none;
+}
+
+#campo2 {
+    background-color: white;
+    color: #0A3871;
+    font-size: 30px;
+}
+
+#campo2::placeholder {
+    color: #0A3871;
+}
+/*CAMPO DE TEXTO PARA A CODIFICAÇÃO*/
+.codificador {
+    box-sizing: border-box;
+    width: 50vw;
+    height: 80vh;
+    margin: 100px 0 0 70px;
+    justify-content: center;
+    padding: 10px 100px;
+}
+
+.aviso {
+    display: flex;
+    flex-direction: row;
+    margin: 2% 0 10px 0;
+    font-size: 10.5px;
+    align-items: center;
+}
+
+.aviso p {
+    margin: 0 0 0 5px;
+}
+
+.botoes {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botao {
+    display: flex;
+    border-radius: 24px;
+    width: 230px;
+    height: 55px;
+    border: #0A3871 solid 2px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.botao1 {
+    background-color: #0A3871;
+    color: white;
+}
+
+.botao2 {
+    color: #0A3871;
+    background-color: #F3F5FC;
+}
+/*BOTÃO DE "COPIAR TEXTO" QUE SERÁ CRIADO POSTERIORMENTE PELO JS*/
+.botao3 {
+    background-color: white;
+}
+/*CAMPO DE DECODIFICAÇÃO*/
+#decodificador {
+    background-color: white;
+    border-radius: 32px;
+    width: 30%;
+    height: 97%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 50px;
+    box-sizing: border-box;
+    margin: 50px 0 0 20px;
+    box-shadow: 0px 24px 32px -8px #00000014;
+}
+
+.icone {
+    width: 300px;
+}
+
+#none {
+    font-size: 18px;
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 768px) /*TABLET*/ {
+    body {
+        flex-direction: column;
+    }
+    
+    .logo {
+        margin: 20px 0 90px 30px ;
+    }
+
+    .icone {
+        display: none;
+    }
+
+    .codificador {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .principal {
+        width: 90vw;
+        margin: 0 30px;
+    }
+    .aviso {
+        margin: 0 0 10px 0;
+    }
+
+    .botao {
+        width: 45%;
+    }
+
+    #decodificador {
+        width: 92vw;
+    }
+
+    #none {
+        font-size: 25px;
+        margin-bottom: 50px;
+    }
+    #campo2 {
+        font-size: 20px;
+        text-align: center;
+        height: 20vh;
+    }
+    #campo2::placeholder {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .botao3 {
+        margin-top: 10px;
+        width: 85vw;
+    }
+}
+
+@media (max-width: 375px) /*CELULAR*/ {
+    .botoes {
+        flex-direction: column;
+        margin: 10px 0 10px 0;
+        height: 125px;
+    }
+
+    .botao {
+        width: 100%;
+    }
+
+    .logo {
+        margin: 20px 0 90px 10px;
+    }
+
+    .principal {
+        margin: 0 10px;
+    }
+
+    #decodificador {
+        margin: 100px 10px;
+    }
+
+    .botao3 {
+        width: 85vw;
+    }
+
+    #none {
+        font-size: 20px;
+    }
+
+    #campo2 {
+        font-size: 18px;
+        height: 150px;
+    }
+    #campo2::placeholder {
+        font-size: 18px;
+    }
+}

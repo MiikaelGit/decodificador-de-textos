@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Codificador/Decodificador de texto</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="img/Vector.png" alt="logomarca da alura">
+    </div>
+    <!--CAMPO DE CODIFICAÇÃO-->
+    <div class="principal">
+        <div class="codificador">
+            <textarea name="" id="campo" placeholder="Digite seu texto"></textarea>
+            <div class="aviso">
+                <img src="img/icone.png" alt="" width="12px" height="12px">
+                <p>Apenas letras minúsculas e sem acento.</p>
+            </div>
+            <div class="botoes">
+                <button class="botao botao1">Criptografar</button>
+                <button class="botao botao2">Descriptografar</button>
+            </div>
+        </div>
+    </div>
+    <!--CAMPO DE DECODIFICAÇÃO-->
+    <div id="decodificador">
+        <img class="icone" src="img/High quality products 1 1.svg" alt="">
+        <h2 id="none">Nenhuma mensagem encontrada</h2>
+        <textarea name="" id="campo2" placeholder="Digite um texto que você deseja criptografar ou descriptografar"></textarea>
+        <!--DIV INICIALMENTE VAZIA, QUE IRÁ RECEBER O BOTÃO DE "COPIAR TEXTO", QUE SERÁ GERADO PELO JS-->
+        <div id="copy"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
