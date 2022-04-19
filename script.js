@@ -45,13 +45,12 @@ function decodificar() {
     
         document.getElementById('campo2').innerHTML = `${txt}`;
         
-        // CRIA O BOTÃO DE COPIAR TEXTO QUANDO A FUNÇÃO "CODIFICAR()" É CHAMADA
+        // CRIA O BOTÃO DE COPIAR TEXTO QUANDO A FUNÇÃO "DECODIFICAR()" É CHAMADA
         document.getElementById('copy').innerHTML = '<button class="botao botao3" onclick="copy()">Copiar</button>';
     }
 }
 // FUNÇÃO PARA COPIAR O TEXTO CONVERTIDO
 function copy() {
-    //navigator.clipboard.writeText(input2.value)
     document.querySelector('#campo2').select();
     document.execCommand('copy');
     alert('Copiado!');
