@@ -126,10 +126,6 @@ textarea {
     font-size: 18px;
 }
 
-#mensagem {
-    
-}
-
 /*MEDIA QUERIES*/
 
 @media (max-width: 768px) /*TABLET*/ {
@@ -187,8 +183,8 @@ textarea {
     }
     
     .mensagem {
-        width: 624px;
-        margin-bottom: 0;
+        width: 90%;
+        margin-bottom: 0;  
     }
 }
 
