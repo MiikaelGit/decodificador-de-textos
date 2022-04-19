@@ -1,5 +1,5 @@
 var input = document.querySelector('textarea#campo');
-var input2 = document.querySelector('textarea#campo2');
+var output = document.querySelector('textarea#campo2');
 input.focus();
 
 // FUNÇÃO PARA CONVERTER A MENSAGEM (CODIFICAR)
@@ -9,8 +9,9 @@ function codificar() {
         input.focus();
     } else {
         // LIMPA O CAMPO TODA A VEZ QUE A FUNÇÃO É CHAMADA
-        document.getElementById('none').innerHTML = '';
-        document.querySelector('img.icone').style.display = 'none';
+        //document.getElementById('none').innerHTML = '';
+        document.querySelector("div#decodificador").innerHTML = '';
+       // document.querySelector('img.icone').style.display = 'none';
 
         var texto = input.value
         var txt =  texto.replace(/e/igm, 'enter');
@@ -19,10 +20,10 @@ function codificar() {
         var txt = txt.replace(/o/igm, 'ober');
         var txt = txt.replace(/u/igm, 'ufat');
 
-        document.getElementById('campo2').innerHTML = `${txt}`;
+        document.getElementById('decodificador').innerHTML = `<textarea readonly name="" id="campo2">${txt}</textarea>`;
 
         // CRIA O BOTÃO DE COPIAR TEXTO QUANDO A FUNÇÃO "CODIFICAR()" É CHAMADA
-        document.getElementById('copy').innerHTML = '<button class="botao botao3" onclick="copy()">Copiar</button>';
+        document.getElementById('decodificador').innerHTML += '<button class="botao botao3" onclick="copy()">Copiar</button>';
     }
 }
 // FUNÇÃO PARA DECODIFICAR O TEXTO
@@ -32,9 +33,10 @@ function decodificar() {
         input.focus();
     } else {
         // LIMPA O CAMPO TODA A VEZ QUE O BOTÃO É CLICADO
-        document.getElementById('none').innerHTML = '';
-        document.querySelector('img.icone').style.display = 'none';
-        document.getElementById('campo').innerHTML = '';
+        //document.getElementById('none').innerHTML = '';
+        
+        //document.querySelector('img.icone').style.display = 'none';
+        document.getElementById('decodificador').innerHTML = '';
 
         var texto = input.value
         var txt =  texto.replace(/enter/igm, 'e');
@@ -42,11 +44,11 @@ function decodificar() {
         txt = txt.replace(/ai/igm, 'a');
         txt = txt.replace(/ober/igm, 'o');
         txt = txt.replace(/ufat/igm, 'u');
-    
-        document.getElementById('campo2').innerHTML = `${txt}`;
+        
+        document.getElementById('decodificador').innerHTML = `<textarea readonly name="" id="campo2">${txt}</textarea>`;
         
         // CRIA O BOTÃO DE COPIAR TEXTO QUANDO A FUNÇÃO "DECODIFICAR()" É CHAMADA
-        document.getElementById('copy').innerHTML = '<button class="botao botao3" onclick="copy()">Copiar</button>';
+        document.getElementById('decodificador').innerHTML += '<button class="botao botao3" onclick="copy()">Copiar</button>';
     }
 }
 // FUNÇÃO PARA COPIAR O TEXTO CONVERTIDO

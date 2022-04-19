@@ -32,14 +32,13 @@ textarea {
 }
 
 #campo2 {
+    height: 90%;
     background-color: white;
-    color: #0A3871;
-    font-size: 32px;
+    font-size: 24px;
     color: #495057;
 }
 
 #campo2::placeholder {
-    color: #0A3871;
     font-size: 32px;
     text-align: center;
     color: #495057;
@@ -76,9 +75,9 @@ textarea {
 .botao {
     display: flex;
     border-radius: 24px;
-    width: 230px;
+    width: 235px;
     height: 55px;
-    border: #0A3871 solid 2px;
+    border: #0A3871 solid 1px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -95,30 +94,40 @@ textarea {
 /*BOTÃO DE "COPIAR TEXTO" QUE SERÁ CRIADO POSTERIORMENTE PELO JS*/
 .botao3 {
     background-color: white;
+    color:#0A3871;
 }
 /*CAMPO DE DECODIFICAÇÃO*/
 #decodificador {
-    background-color: white;
-    border-radius: 32px;
-    width: 30%;
-    height: 97%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 10px 50px;
+    background-color: white;
+    border-radius: 32px;
     box-sizing: border-box;
-    margin: 50px 0 0 20px;
+    width: 25%;
+    height: 93vh;
+    padding: 25px;
+    margin: 20px 0 0 20px;
     box-shadow: 0px 24px 32px -8px #00000014;
 }
 
+.mensagem {
+    width: 236px;
+    height: 48px;
+    color: #495057;
+}
 .icone {
-    width: 300px;
+    width: 250px;
 }
 
 #none {
     font-size: 18px;
+}
+
+#mensagem {
+    
 }
 
 /*MEDIA QUERIES*/
@@ -156,11 +165,11 @@ textarea {
 
     #decodificador {
         width: 92vw;
+        height: auto;
     }
 
     #none {
         font-size: 25px;
-        margin-bottom: 50px;
     }
     #campo2 {
         font-size: 20px;
@@ -176,11 +185,17 @@ textarea {
         margin-top: 10px;
         width: 85vw;
     }
+    
+    .mensagem {
+        width: 624px;
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width: 375px) /*CELULAR*/ {
     .botoes {
         flex-direction: column;
+        align-items: center;
         margin: 10px 0 10px 0;
         height: 125px;
     }
@@ -199,6 +214,7 @@ textarea {
 
     #decodificador {
         margin: 100px 10px;
+        height: auto;
     }
 
     .botao3 {
@@ -216,4 +232,11 @@ textarea {
     #campo2::placeholder {
         font-size: 18px;
     }
+
+    .mensagem {
+        width: 276px;
+        font-size: 16px;
+    }
+
+    
 }
