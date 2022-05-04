@@ -4,33 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Codificador/Decodificador de texto</title>
 </head>
 <body>
-    <div class="logo">
-        <img src="img/Vector.png" alt="logomarca da alura">
-    </div>
-    <!--CAMPO DE CODIFICAÇÃO-->
-    <div class="principal">
-        <div class="codificador">
-            <textarea name="" id="campo" placeholder="Digite seu texto"></textarea>
-            <div class="aviso">
-                <img src="img/icone.png" alt="" width="12px" height="12px">
-                <p>Apenas letras minúsculas e sem acento.</p>
+    <header class="logo">
+        <img src="img/Vector.png" alt="Logomarca da Alura">
+    </header>
+        <!--CAMPO DE CODIFICAÇÃO-->
+    <main>
+        <section class="principal">
+            <div class="codificador">
+                <textarea name="" id="campo" placeholder="Digite seu texto"></textarea>
+                <div class="aviso">
+                    <img src="img/icone.png" alt="" width="12px" height="12px">
+                    <p>Apenas letras minúsculas e sem acento.</p>
+                </div>
+                <div class="botoes">
+                    <button class="botao botao1">Criptografar</button>
+                    <button class="botao botao2">Descriptografar</button>
+                </div>
             </div>
-            <div class="botoes">
-                <button class="botao botao1">Criptografar</button>
-                <button class="botao botao2">Descriptografar</button>
-            </div>
-        </div>
-    </div>
-    <!--CAMPO DE DECODIFICAÇÃO-->
-    <div id="decodificador">
-        <img class="icone" src="img/High quality products 1 1.svg" alt="">
-        <h2 id="none">Nenhuma mensagem encontrada</h2>
-        <p class="mensagem">Digite um texto que voce deseja criptografar ou descriptografar.</p>
-    </div>
+        </section>
+        <!--CAMPO DE DECODIFICAÇÃO-->
+        <section id="decodificador">
+            <img class="icone" src="img/High quality products 1 1.svg" alt="">
+            <h2 id="none">Nenhuma mensagem encontrada</h2>
+            <p class="mensagem">Digite um texto que voce deseja criptografar ou descriptografar.</p>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

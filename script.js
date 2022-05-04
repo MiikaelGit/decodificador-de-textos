@@ -1,5 +1,5 @@
-var input = document.querySelector('textarea#campo');
-var output = document.querySelector('textarea#campo2');
+const input = document.querySelector('textarea#campo');
+const output = document.querySelector('textarea#campo2');
 input.focus();
 
 // FUNÇÃO PARA CONVERTER A MENSAGEM (CODIFICAR)
@@ -9,16 +9,14 @@ function codificar() {
         input.focus();
     } else {
         // LIMPA O CAMPO TODA A VEZ QUE A FUNÇÃO É CHAMADA
-        //document.getElementById('none').innerHTML = '';
-        document.querySelector("div#decodificador").innerHTML = '';
-       // document.querySelector('img.icone').style.display = 'none';
+        document.getElementById("decodificador").innerHTML = '';
 
-        var texto = input.value
-        var txt =  texto.replace(/e/igm, 'enter');
-        var txt = txt.replace(/i/igm, 'imes');
-        var txt = txt.replace(/a/igm, 'ai');
-        var txt = txt.replace(/o/igm, 'ober');
-        var txt = txt.replace(/u/igm, 'ufat');
+        let texto = input.value
+        let txt =  texto.replace(/e/igm, 'enter');
+        txt = txt.replace(/i/igm, 'imes');
+        txt = txt.replace(/a/igm, 'ai');
+        txt = txt.replace(/o/igm, 'ober');
+        txt = txt.replace(/u/igm, 'ufat');
 
         document.getElementById('decodificador').innerHTML = `<textarea readonly name="" id="campo2">${txt}</textarea>`;
 
@@ -33,13 +31,10 @@ function decodificar() {
         input.focus();
     } else {
         // LIMPA O CAMPO TODA A VEZ QUE O BOTÃO É CLICADO
-        //document.getElementById('none').innerHTML = '';
-        
-        //document.querySelector('img.icone').style.display = 'none';
         document.getElementById('decodificador').innerHTML = '';
 
-        var texto = input.value
-        var txt =  texto.replace(/enter/igm, 'e');
+        let texto = input.value
+        let txt =  texto.replace(/enter/igm, 'e');
         txt = txt.replace(/imes/igm, 'i');
         txt = txt.replace(/ai/igm, 'a');
         txt = txt.replace(/ober/igm, 'o');
@@ -60,10 +55,10 @@ function copy() {
 
 
 
-var botao1 = document.querySelector('button.botao1');
+let botao1 = document.querySelector('button.botao1');
 botao1.onclick = codificar;
 
-var botao2 = document.querySelector('button.botao2');
+let botao2 = document.querySelector('button.botao2');
 botao2.onclick = decodificar;
 
 

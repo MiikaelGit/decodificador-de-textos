@@ -3,21 +3,24 @@ body {
     display: flex;
     height: 90vh;
     width: 90vw;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
 }
 /*ALTERA AS PROPRIEDADES DA IMAGEM DA LOGOMARCA*/
 .logo {
     margin: 20px 0 0 50px ;
 }
 /*ALTERA AS PROPRIEDADES DOS CAMPOS DE TEXTO*/
+main {
+    display: flex;
+}
+
 #campo::placeholder {
     color: #0A3871;
 }
 textarea {
     color: #0A3871;
     font-size: 32px;
-    font-weight: 100;
-    
 }
 
 textarea {
@@ -132,6 +135,10 @@ textarea {
     body {
         flex-direction: column;
     }
+
+    main {
+        flex-direction: column;
+    }
     
     .logo {
         margin: 20px 0 90px 30px ;
@@ -209,7 +216,7 @@ textarea {
     }
 
     #decodificador {
-        margin: 100px 10px;
+        margin: 100px 10px 0;
         height: auto;
     }
 
